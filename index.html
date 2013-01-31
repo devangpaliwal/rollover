@@ -8,9 +8,9 @@
 
 		.rollover{
 			position:relative;
-			width:40px;
+			
 			height:50px;
-			width:40px;
+			width:60px;
 			height:50px;
 			
 			
@@ -18,9 +18,14 @@
 		.frontFace{
 			background-color: lightpink;
 			height:100%;
-			border-radius: 10px;
+			border-radius: 60px;
 			border:5px solid grey;
+
 		}
+		.frontFace .content{
+			padding:14px 0px 0px 7px; 
+		}
+
 		.backFace{
 			background-color: black;
 			color:#FFF;
@@ -31,9 +36,17 @@
 			z-index: -1;
 			
 			height:100%;
-			
-			border-radius: 10px;
+			width:90%;
+			border-radius: 60px;
+			border-top:5px solid grey;
+			border-bottom:5px solid grey;
+			border-right:5px solid grey;
 		}
+		.backFace .content{
+			margin-left: 50px;
+			padding:14px 0px 0px 7px; 
+		}
+
 	</style>
 </head>
 <body>
@@ -42,8 +55,9 @@
 
 		<div class="rollover">
 			<div class="frontFace">
-				HHH
-				<div class="backFace" href="#"> 00</div>
+				<div class="content">HHH</div>
+				<div class="backFace"> 
+					<div class="content">MMM</div>
 			</div>
 		</div>
 		
@@ -53,7 +67,7 @@
 	$(".frontFace").mouseover(function(e){
 		$(".backFace").stop(true).animate({width:100});
 	}).mouseout(function(e){
-		$(".backFace").stop(true).animate({width:40});
+		$(".backFace").stop(true).animate({width:50});
 	});
 
 </script>
