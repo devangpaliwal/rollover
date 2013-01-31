@@ -1,1 +1,59 @@
-hi
+<html>
+<head>
+	<title>rollover page</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<style type="text/css">
+
+		.rollover{
+			position:relative;
+			width:40px;
+			height:50px;
+			width:40px;
+			height:50px;
+			
+			
+		}
+		.frontFace{
+			background-color: lightpink;
+			height:100%;
+			border-radius: 10px;
+			border:5px solid grey;
+		}
+		.backFace{
+			background-color: black;
+			color:#FFF;
+			position:absolute;
+			left:0px;
+			top:0px;
+			
+			z-index: -1;
+			
+			height:100%;
+			
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Markup for Rollover Starts -->
+
+		<div class="rollover">
+			<div class="frontFace">
+				HHH
+				<div class="backFace" href="#"> 00</div>
+			</div>
+		</div>
+		
+	<!-- Markup for Rollover Ends -->
+
+<script type="text/javascript">
+	$(".frontFace").mouseover(function(e){
+		$(".backFace").stop(true).animate({width:100});
+	}).mouseout(function(e){
+		$(".backFace").stop(true).animate({width:40});
+	});
+
+</script>
+</body>
+</html>
